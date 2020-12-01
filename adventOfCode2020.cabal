@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9100aa26669dc0f8d9a8fbfdb0f5dbefbdaae9433ff63302e2d3bb2e748fbe5d
+-- hash: 7a22c507c4d0894573bcba69fb44be7daf912a0f46ac827729549a766bbb1245
 
 name:           adventOfCode2020
 version:        0.1.0.0
@@ -12,6 +12,7 @@ build-type:     Simple
 
 library
   exposed-modules:
+      AOC
       Day1
   other-modules:
       Paths_adventOfCode2020
@@ -41,6 +42,7 @@ test-suite adventOfCode2020-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      AOCSpec
       Day1Spec
       Paths_adventOfCode2020
   hs-source-dirs:

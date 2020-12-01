@@ -1,5 +1,10 @@
 module Main where
+    
+import AOC 
 
 main :: IO ()
-main = putStrLn "hello world"
+main = 
+    day1 >>= print 
+    
+
 
