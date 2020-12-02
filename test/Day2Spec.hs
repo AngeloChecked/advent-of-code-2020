@@ -6,7 +6,7 @@ import Test.Hspec
 
 
 spec :: Spec
-spec =  
+spec = do 
     describe "Day2" $ do
         it "read file lines" $ do
             passwordsToValidate <- fread "resources/passwords.txt" 
@@ -31,3 +31,22 @@ spec =
                              , (PasswordToValidate 1 1 'w' "wdfdsf") 
                              , (PasswordToValidate 1 3 'w' "wwwdfdsf") 
                              ] 
+    describe "Day2 Part2" $ do
+        it "password is valid if string contains exactly one of given char in the min/max index" $ do
+            validPassword2 (PasswordToValidate 1 2 'w' "werwdsd") `shouldBe` True
+            validPassword2 (PasswordToValidate 2 5 'w' "wwfdwf") `shouldBe` False
+            validPassword2 (PasswordToValidate 1 2 'w' "dwfdsf") `shouldBe` True
+            validPassword2 (PasswordToValidate 1 6 'w' "xdfdsw") `shouldBe` True
+            validPassword2 (PasswordToValidate 1 6 'w' "xdfdse") `shouldBe` False
+        it "all valid password" $
+            allValidPassword2 [ (PasswordToValidate 1 2 'w' "werwdsd") 
+                              , (PasswordToValidate 2 5 'w' "wwfdwf")
+                              , (PasswordToValidate 1 2 'w' "dwfdsf")
+                              , (PasswordToValidate 1 6 'w' "xdfdsw")
+                              , (PasswordToValidate 1 6 'w' "xdfdse")
+                              ]
+            `shouldBe` 
+                              [ (PasswordToValidate 1 2 'w' "werwdsd") 
+                              , (PasswordToValidate 1 2 'w' "dwfdsf")
+                              , (PasswordToValidate 1 6 'w' "xdfdsw")
+                              ] 

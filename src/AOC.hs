@@ -14,3 +14,7 @@ day1Part2 = do
 day2 = do
     passwordsToValidate <- fread "resources/passwords.txt" 
     return $ length . allValidPassword $ passwordToValidateFromString <$> passwordsToValidate
+
+day2Part2 = do
+    passwordsToValidate <- fread "resources/passwords.txt" 
+    return $ length . allValidPassword2 $ passwordToValidateFromString <$> passwordsToValidate

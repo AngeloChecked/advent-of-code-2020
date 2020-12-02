@@ -2,6 +2,7 @@ module Day2 where
 
 import Data.Monoid
 import Data.List.Split
+import Data.List.NonEmpty as NonEmpty (xor, fromList) 
 import Day1
 
 fread :: String -> IO [String]
@@ -36,3 +37,14 @@ passwordToValidateFromString s = let splitRangesAndPassword = splitOn ":" s
 
 allValidPassword :: [PasswordToValidate] -> [PasswordToValidate]
 allValidPassword = filter validPassword
+
+-- part2
+
+validPassword2 :: PasswordToValidate -> Bool
+validPassword2 a =  let c = (==(char a)) . (\i -> (password a)!!(i-1)) <$> [minRange a, maxRange a] 
+                    in xor $ NonEmpty.fromList c 
+
+allValidPassword2 :: [PasswordToValidate] -> [PasswordToValidate]
+allValidPassword2 = filter validPassword2
+                 
+                

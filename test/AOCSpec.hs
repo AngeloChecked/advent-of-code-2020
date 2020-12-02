@@ -15,3 +15,6 @@ spec =
        it "give me all valid password" $ do
         result <- day2 
         result `shouldBe` 550 
+       it "give me all valid password (part2)" $ do
+        result <- day2Part2 
+        result `shouldBe` 634 
