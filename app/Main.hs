@@ -3,8 +3,9 @@ module Main where
 import AOC 
 
 main :: IO ()
-main = 
+main = do 
     day1 >>= print 
+    day1Part2 >>= print 
     
 
 
