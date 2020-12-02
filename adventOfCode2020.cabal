@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 23580c58eaecb0082a34eee745c084f26fc4086a51a66b1fa9427973bc438a24
+-- hash: 3b3420efedd44e49b1b131a18c23ccd14167fa89e036f541972ee68e3ed9e063
 
 name:           adventOfCode2020
 version:        0.1.0.0
@@ -14,6 +14,7 @@ library
   exposed-modules:
       AOC
       Day1
+      Day2
   other-modules:
       Paths_adventOfCode2020
   hs-source-dirs:
@@ -23,6 +24,7 @@ library
     , base >=4.7 && <5
     , containers
     , hspec
+    , split
   default-language: Haskell2010
 
 executable adventOfCode2020-exe
@@ -38,6 +40,7 @@ executable adventOfCode2020-exe
     , base >=4.7 && <5
     , containers
     , hspec
+    , split
   default-language: Haskell2010
 
 test-suite adventOfCode2020-test
@@ -46,6 +49,7 @@ test-suite adventOfCode2020-test
   other-modules:
       AOCSpec
       Day1Spec
+      Day2Spec
       Paths_adventOfCode2020
   hs-source-dirs:
       test
@@ -56,4 +60,5 @@ test-suite adventOfCode2020-test
     , base >=4.7 && <5
     , containers
     , hspec
+    , split
   default-language: Haskell2010
