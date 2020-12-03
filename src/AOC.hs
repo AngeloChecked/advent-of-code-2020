@@ -2,6 +2,7 @@ module AOC where
 
 import Day1 
 import Day2
+import Day3
 
 day1 = do 
      expenses <- freadInt "resources/expense.txt" 
@@ -18,3 +19,8 @@ day2 = do
 day2Part2 = do
     passwordsToValidate <- fread "resources/passwords.txt" 
     return $ length . allValidPassword2 $ passwordToValidateFromString <$> passwordsToValidate
+
+day3 = do
+    map <- fread "resources/threes.txt" 
+    return $ numberOfThreesEncountered map
+

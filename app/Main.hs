@@ -8,6 +8,7 @@ main = do
     day1Part2 >>= print 
     day2 >>= print 
     day2Part2 >>= print 
+    day3 >>= print 
     
 
 
