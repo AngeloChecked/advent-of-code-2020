@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: adb90a441ef55f52b30862d23d7f5eda3084f9ade43df966ba92b93234ac087c
+-- hash: db739518c7b3b644d311e8bc4d034c0fa3284ce7fbf625b92494f1f5e5908f50
 
 name:           adventOfCode2020
 version:        0.1.0.0
@@ -25,6 +25,7 @@ library
     , base >=4.7 && <5
     , containers
     , hspec
+    , protolude
     , split
   default-language: Haskell2010
 
@@ -41,6 +42,7 @@ executable adventOfCode2020-exe
     , base >=4.7 && <5
     , containers
     , hspec
+    , protolude
     , split
   default-language: Haskell2010
 
@@ -62,5 +64,6 @@ test-suite adventOfCode2020-test
     , base >=4.7 && <5
     , containers
     , hspec
+    , protolude
     , split
   default-language: Haskell2010

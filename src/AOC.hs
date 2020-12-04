@@ -24,3 +24,7 @@ day3 = do
     map <- fread "resources/threes.txt" 
     return $ numberOfThreesEncountered map
 
+day3Part2 = do
+    map <- fread "resources/threes.txt" 
+    return $ productEnconuteredThressWithDifferentsPatterns [(1,1),(3,1),(5,1),(7,1),(1,2)] map
+

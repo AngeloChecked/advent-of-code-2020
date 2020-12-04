@@ -18,6 +18,9 @@ spec =
        it "give me all valid password (part2)" $ do
         result <- day2Part2 
         result `shouldBe` 634 
-       it "assword (part2)" $ do
+       it "give me all encountered threes in the map" $ do
         result <- day3 
         result `shouldBe` 205 
+       it "product all encountered threes moving in different patterns in the map (part2)" $ do
+        result <- day3Part2 
+        result `shouldBe` 3952146825 
