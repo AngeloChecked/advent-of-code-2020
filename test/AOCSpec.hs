@@ -24,3 +24,6 @@ spec =
        it "product all encountered threes moving in different patterns in the map (part2)" $ do
         result <- day3Part2 
         result `shouldBe` 3952146825 
+       it "all valid passports are" $ do
+        result <- day4
+        result `shouldBe` 256 
