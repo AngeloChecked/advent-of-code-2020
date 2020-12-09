@@ -27,3 +27,6 @@ spec =
        it "all valid passports are" $ do
         result <- day4
         result `shouldBe` 256 
+       it "all valid passports are (part2)" $ do
+        result <- day4Part2
+        result `shouldBe` 198 

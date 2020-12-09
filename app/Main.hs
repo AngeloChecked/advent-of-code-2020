@@ -11,6 +11,7 @@ main = do
     day3 >>= print 
     day3Part2 >>= print 
     day4 >>= print 
+    day4Part2 >>= print 
     
 
 

@@ -33,3 +33,7 @@ day4 = do
     passports <- fread "resources/passports.txt" 
     return $ length $ parseAllValidPassports (splitSpaceAndFlat $ splitPassportsRawFromBatch passports)  
 
+day4Part2 = do
+    passports <- fread "resources/passports.txt" 
+    return $ length $ parseAllValidPassports2 (splitSpaceAndFlat $ splitPassportsRawFromBatch passports)  
+
