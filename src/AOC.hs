@@ -4,6 +4,7 @@ import Day1
 import Day2
 import Day3
 import Day4
+import Day5
 
 day1 = do 
      expenses <- freadInt "resources/expense.txt" 
@@ -36,4 +37,8 @@ day4 = do
 day4Part2 = do
     passports <- fread "resources/passports.txt" 
     return $ length $ parseAllValidPassports2 (splitSpaceAndFlat $ splitPassportsRawFromBatch passports)  
+
+day5 = do
+    seats <- fread "resources/seats.txt" 
+    return $ maximum $ getSeatId <$> parseSeats seats
 

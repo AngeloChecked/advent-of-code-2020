@@ -30,3 +30,7 @@ spec =
        it "all valid passports are (part2)" $ do
         result <- day4Part2
         result `shouldBe` 198 
+       it "get bigger seat Id" $ do
+        result <- day5 
+        result `shouldBe` 883 
+
