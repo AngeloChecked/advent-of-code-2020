@@ -42,3 +42,10 @@ day5 = do
     seats <- fread "resources/seats.txt" 
     return $ maximum $ getSeatId <$> parseSeats seats
 
+day5Part2 = do
+    seats <- fread "resources/seats.txt" 
+    return $ getSeatId 
+                . head 
+                . ignoreStartEndSeats 
+                . missingSeatInTable 
+                $ parseSeats seats

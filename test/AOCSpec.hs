@@ -33,4 +33,6 @@ spec =
        it "get bigger seat Id" $ do
         result <- day5 
         result `shouldBe` 883 
-
+       it "get missing Id" $ do
+        result <- day5Part2 
+        result `shouldBe` 532  
